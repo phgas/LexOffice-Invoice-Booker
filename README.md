@@ -1,6 +1,5 @@
 # LexOffice Invoice Booker
 
-## Description
 This Python script helps you to manage your invoices on the LexOffice platform by leveraging the LexOffice API.
 
 ## Prerequisites
