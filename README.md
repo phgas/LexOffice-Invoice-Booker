@@ -1,15 +1,6 @@
 # LexOffice Invoice Booker
 
-This Python tool is designed to seamlessly manage your invoices on the LexOffice platform. 
-By tapping into the LexOffice API, it automates the process of booking your invoices, allowing you to bypass tedious manual entries and focus on what truly matters for your business.
-
-Essentially what it prevents you from doing for each invoice (one by one) is:
-
-Selecting your invoice and clicking on "Zahlung erfassen" 
-![image_1](images/image_1.png)
-
-Inputting "Zahldatum & Betrag" and confirming via "Zahlung erfassen"           
-![image_2](images/image_2.png)
+This Python script helps you to manage your invoices on the LexOffice platform by leveraging the LexOffice API.
 
 ## Prerequisites
 
@@ -19,16 +10,13 @@ Inputting "Zahldatum & Betrag" and confirming via "Zahlung erfassen"
 ## Installation
 
 1. Clone this repository:
+
     ```
     git clone https://github.com/phgas/LexOffice-Invoice-Booker.git
     ```
-    
-2. Change directory:
-    ```
-    cd LexOffice-Invoice-Booker
-    ```
-    
-3. Install the required Python packages:
+
+2. Install the required Python packages:
+
     ```
     pip install -r requirements.txt
     ```
@@ -50,4 +38,9 @@ Inputting "Zahldatum & Betrag" and confirming via "Zahlung erfassen"
 Run the Python script:
 
 ```bash
-python lexoffice.py
+python lexoffice_FP.py
+```
+or 
+```bash
+python lexoffice_OOP.py
+```
