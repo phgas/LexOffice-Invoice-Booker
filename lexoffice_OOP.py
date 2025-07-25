@@ -23,14 +23,14 @@ class Lexoffice:
 
     def _get_invoices(self) -> list[dict[str, Any]]:
         response = self.session.get(
-            "https://app.lexoffice.de/grld-rest/voucherservice/1/v200/vouchers?ascending=true&deletedIds=&firstRow=0&numRows=9999&orderBy=computedDueDate&status=open&voucherType=SalesInvoice"
+            "https://app.lexware.de/grld-rest/voucherservice/1/v200/vouchers?ascending=true&deletedIds=&firstRow=0&numRows=9999&orderBy=computedDueDate&status=open&voucherType=SalesInvoice"
         )
         invoices = response.json()["content"]
         return invoices
 
     def book_invoices(self) -> None:
         for invoice in self._get_invoices():
-            url = f"https://app.lexoffice.de/grld-rest/personalsalesinvoiceservice/1/v100/payment/{invoice['entityId']}"
+            url = f"https://app.lexware.de/grld-rest/personalsalesinvoiceservice/1/v100/payment/{invoice['entityId']}"
             body = json.dumps(
                 {
                     "amount": float(invoice["amount"]),

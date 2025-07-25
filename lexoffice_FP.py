@@ -20,7 +20,7 @@ def read_cookies_into_session() -> requests.Session:
 
 def get_invoices(session: requests.Session) -> list[dict[str, Any]]:
     response = session.get(
-        "https://app.lexoffice.de/grld-rest/voucherservice/1/v200/vouchers?ascending=true&deletedIds=&firstRow=0&numRows=9999&orderBy=computedDueDate&status=open&voucherType=SalesInvoice"
+        "https://app.lexware.de/grld-rest/voucherservice/1/v200/vouchers?ascending=true&deletedIds=&firstRow=0&numRows=9999&orderBy=computedDueDate&status=open&voucherType=SalesInvoice"
     )
     invoices = response.json()["content"]
     return invoices
@@ -28,7 +28,7 @@ def get_invoices(session: requests.Session) -> list[dict[str, Any]]:
 
 def book_invoices(session: requests.Session, invoices: list[dict[str, Any]]) -> None:
     for invoice in invoices:
-        url = f"https://app.lexoffice.de/grld-rest/personalsalesinvoiceservice/1/v100/payment/{invoice['entityId']}"
+        url = f"https://app.lexware.de/grld-rest/personalsalesinvoiceservice/1/v100/payment/{invoice['entityId']}"
         body = json.dumps(
             {
                 "amount": float(invoice["amount"]),
