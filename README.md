@@ -1,6 +1,6 @@
-# LexOffice Invoice Booker
+# LexWare Invoice Booker
 
-This Python script helps you to manage your invoices on the LexOffice platform by leveraging the LexOffice API.
+This Python script helps you to manage your invoices on the LexWare platform by leveraging the LexWare API.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ This Python script helps you to manage your invoices on the LexOffice platform b
 1. Clone this repository:
 
     ```
-    git clone https://github.com/phgas/LexOffice-Invoice-Booker.git
+    git clone https://github.com/phgas/LexWare-Invoice-Booker.git
     ```
 
 2. Install the required Python packages:
@@ -27,9 +27,9 @@ This Python script helps you to manage your invoices on the LexOffice platform b
 
 2. Go to settings and change the preferred export format for cookies to be JSON.
 
-3. Log in to your LexOffice account via your web browser.
+3. Log in to your LexWare account via your web browser.
 
-4. Use EditThisCookie to export cookies for the `app.lexoffice.de` domain. 
+4. Use EditThisCookie to export cookies for the `app.lexware.de` domain. 
 
 5. Paste the exported cookies into a new file in the project directory, and name it `cookies.json`.
 
@@ -38,9 +38,9 @@ This Python script helps you to manage your invoices on the LexOffice platform b
 Run the Python script:
 
 ```bash
-python lexoffice_FP.py
+python lexware_FP.py
 ```
 or 
 ```bash
-python lexoffice_OOP.py
+python lexware_OOP.py
 ```
